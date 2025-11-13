@@ -1,1 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
 
+# Entornos
+venv/
+.venv/
+
+# Datos y resultados (no versionar grandes archivos)
+data/*
+results/*
+
+# Temporales
+*.swp
+*.bak
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
