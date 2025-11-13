@@ -1,0 +1,154 @@
+Welcome to Termux!
+
+Docs:       https://termux.dev/docs
+Donate:     https://termux.dev/donate
+Community:  https://termux.dev/community
+
+Working with packages:
+
+ - Search:  pkg search <query>
+ - Install: pkg install <package>
+ - Upgrade: pkg upgrade
+
+Subscribing to additional repositories:
+
+ - Root:    pkg install root-repo
+ - X11:     pkg install x11-repo
+
+For fixing any repository issues,
+try 'termux-change-repo' command.
+
+Report issues at https://termux.dev/issues
+~ $ pkg install python python-pip
+Checking availability of current mirror:
+[*] http://mirror.mephi.ru/termux/termux-main: ok
+Hit:1 http://mirror.mephi.ru/termux/termux-main stable InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+7 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python is already the newest version (3.12.12).
+python-pip is already the newest version (25.3).
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+~ $ pip install numpy
+Requirement already satisfied: numpy in /data/data/com.termux/files/usr/li
+b/python3.12/site-packages (2.2.5)
+~ $ pkg install nano
+Checking availability of current mirror:
+[*] http://mirror.mephi.ru/termux/termux-main: ok
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nano is already the newest version (8.7).
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+~ $ mkdir -p ~/TCDS_TEC_TCDS_001/scripts
+~ $ mkdir -p ~/TCDS_TEC_TCDS_001/data
+~ $ mkdir -p ~/TCDS_TEC_TCDS_001/results
+~ $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ nano test_sigma.py
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
+gma.py", line 3
+    def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
+                             ^^^^^^^
+SyntaxError: invalid syntax
+~/TCDS_TEC_TCDS_001/scripts $ nano sigma_demo_step1_generate_data.py
+~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step1_generate_data.py
+✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TE
+C_TCDS_001/data
+~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_e
+veto_report.json
+cat: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/results/sigma_demo
+_eveto_report.json: No such file or directory
+~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step1_generate_data.py
+✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TE
+C_TCDS_001/data
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
+gma.py", line 3
+    def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
+                             ^^^^^^^
+SyntaxError: invalid syntax
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
+gma.py", line 3
+    def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
+                             ^^^^^^^
+SyntaxError: invalid syntax
+~/TCDS_TEC_TCDS_001/scripts $ nano test_sigma.py
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
+tc_grid[0:5] = [0.         0.00502513 0.01005025 0.01507538 0.0201005 ]
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ nano sigma_demo_step2_metrics.py
+~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
+~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step2_metrics.py
+✅ Reporte guardado en: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001
+/results/sigma_demo_eveto_report.json
+ΔH = 0.0
+~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_e
+veto_report.json
+{
+  "description": "Reporte Σ-metrics + E-Veto para datos sintéticos demo",
+  "H_M": 3.553415091193861,
+  "H_C": 3.553415091193861,
+  "delta_H": 0.0,
+  "sigma_metrics": {
+    "global": {
+      "LI": 0.02,
+      "R_mean": 0.7367481940045921,
+      "R_std": 0.03181870946157074,
+      "RMSE_SL": 0.2988315254568602,
+      "kappa_sigma": 9.854414227628954
+    },
+    "pre": {
+      "LI": 0.18,
+      "R_mean": 0.7472744120929762,
+      "R_std": 0.0627088613865831,
+      "RMSE_SL": 0.306698836121036,
+      "kappa_sigma": 12.432860947230559
+    },
+    "near": {
+      "LI": 0.0,
+      "R_mean": 0.526211650428986,
+      "R_std": 0.12665517845015442,
+      "RMSE_SL": 0.29493578219486727,
+      "kappa_sigma": 10.18515637707442
+    },
+    "mid": {
+      "LI": 0.0,
+      "R_mean": 0.12862686649642854,
+      "R_std": 0.16922492804507863,
+      "RMSE_SL": 0.2925939937093575,
+      "kappa_sigma": 8.535565294789066
+    }
+  },
+  "verdicts": {
+    "global": {
+      "strong_sigma": false,
+      "low_entropy": false,
+      "accept_Eveto": false
+    },
+    "pre": {
+      "strong_sigma": false,
+      "low_entropy": false,
+      "accept_Eveto": false
+    },
+    "near": {
+      "strong_sigma": false,
+      "low_entropy": false,
+      "accept_Eveto": false
+    },
+    "mid": {
+      "strong_sigma": false,
+      "low_entropy": false,
+      "accept_Eveto": false
+    }
+  }
+}~/TCDS_TEC_TCDS_001/scripts $
