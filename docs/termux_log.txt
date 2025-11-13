@@ -34,8 +34,7 @@ python is already the newest version (3.12.12).
 python-pip is already the newest version (25.3).
 0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
 ~ $ pip install numpy
-Requirement already satisfied: numpy in /data/data/com.termux/files/usr/li
-b/python3.12/site-packages (2.2.5)
+Requirement already satisfied: numpy in /data/data/com.termux/files/usr/lib/python3.12/site-packages (2.2.5)
 ~ $ pkg install nano
 Checking availability of current mirror:
 [*] http://mirror.mephi.ru/termux/termux-main: ok
@@ -51,33 +50,26 @@ nano is already the newest version (8.7).
 ~/TCDS_TEC_TCDS_001/scripts $ nano test_sigma.py
 ~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
 ~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
-  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
-gma.py", line 3
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_sigma.py", line 3
     def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
                              ^^^^^^^
 SyntaxError: invalid syntax
 ~/TCDS_TEC_TCDS_001/scripts $ nano sigma_demo_step1_generate_data.py
 ~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step1_generate_data.py
-✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TE
-C_TCDS_001/data
-~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_e
-veto_report.json
-cat: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/results/sigma_demo
-_eveto_report.json: No such file or directory
+✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/data
+~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_eveto_report.json
+cat: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/results/sigma_demo_eveto_report.json: No such file or directory
 ~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step1_generate_data.py
-✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TE
-C_TCDS_001/data
+✅ Datos sintéticos generados en: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/data
 ~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
 ~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
-  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
-gma.py", line 3
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_sigma.py", line 3
     def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
                              ^^^^^^^
 SyntaxError: invalid syntax
 ~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
 ~/TCDS_TEC_TCDS_001/scripts $ python test_sigma.py
-  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_si
-gma.py", line 3
+  File "/data/data/com.termux/files/home/TCDS_TEC_TCDS_001/scripts/test_sigma.py", line 3
     def test(): N_GRID = 200 tc_grid = np.linspace(0.0, 1.0, N_GRID)
                              ^^^^^^^
 SyntaxError: invalid syntax
@@ -89,11 +81,9 @@ tc_grid[0:5] = [0.         0.00502513 0.01005025 0.01507538 0.0201005 ]
 ~/TCDS_TEC_TCDS_001/scripts $ nano sigma_demo_step2_metrics.py
 ~/TCDS_TEC_TCDS_001/scripts $ cd ~/TCDS_TEC_TCDS_001/scripts
 ~/TCDS_TEC_TCDS_001/scripts $ python sigma_demo_step2_metrics.py
-✅ Reporte guardado en: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001
-/results/sigma_demo_eveto_report.json
+✅ Reporte guardado en: /data/data/com.termux/files/home/TCDS_TEC_TCDS_001/results/sigma_demo_eveto_report.json
 ΔH = 0.0
-~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_e
-veto_report.json
+~/TCDS_TEC_TCDS_001/scripts $ cat ~/TCDS_TEC_TCDS_001/results/sigma_demo_eveto_report.json
 {
   "description": "Reporte Σ-metrics + E-Veto para datos sintéticos demo",
   "H_M": 3.553415091193861,
