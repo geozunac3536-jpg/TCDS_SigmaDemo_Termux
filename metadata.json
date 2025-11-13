@@ -1,1 +1,119 @@
-
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": [
+    "CreativeWork",
+    "SoftwareSourceCode",
+    "Dataset",
+    "ResearchProject"
+  ],
+  "identifier": "tcds:sigma-demo-termux-v0.1.0",
+  "name": "TCDS Σ-metrics Termux Demo — E-Veto sobre datos sintéticos (v0.1.0)",
+  "alternateName": [
+    "Sigma Demo Termux",
+    "TCDS Σ-metrics Demo en Android",
+    "Filtro de Honestidad (E-Veto) sobre datos sintéticos",
+    "Coherencímetro software TCDS (prototipo)"
+  ],
+  "description": "Implementación mínima y auditable del motor Σ-metrics y del Filtro de Honestidad (E-Veto) de la Teoría de la Cromodinámica Sincrónica (TCDS) sobre datos sintéticos, ejecutada en un entorno Termux (Android). El avance consiste en: (1) calibrar Python+NumPy en un dispositivo móvil (Samsung S23), (2) generar un conjunto sintético de eventos X_tc(t_C) con una forma Σ_base común y ruido controlado, (3) definir un pipeline reproducible para calcular Σ-metrics (R_mean, LI, RMSE_SL, κΣ) en ventanas de t_C, y (4) aplicar un E-Veto entrópico (ΔH) que verifica que el sistema no declare coherencia Σ válida cuando no hay reducción real de entropía. En este estado, el demo confirma que el filtro E-Veto no produce falsos positivos y que el entorno Termux funciona como laboratorio Q-driven portátil para futuros experimentos TCDS con datos sísmicos reales.",
+  "version": "0.1.0",
+  "dateCreated": "2025-11-13",
+  "dateModified": "2025-11-13",
+  "license": [
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://opensource.org/licenses/MIT"
+  ],
+  "inLanguage": "es",
+  "programmingLanguage": "Python 3.12",
+  "operatingSystem": [
+    "Android 16 (Samsung S23, Termux)",
+    "GNU/Linux (entorno compatible para reproducción en escritorio/servidor)"
+  ],
+  "codeRepository": "https://github.com/geozunac3536-jpg/TCDS_SigmaDemo_Termux",
+  "url": "https://geozunac3536-jpg.github.io/TCDS_SigmaDemo_Termux/",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Teoría de la Cromodinámica Sincrónica (TCDS)",
+    "identifier": "https://doi.org/10.5281/zenodo.17520491"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Genaro Carrasco Ozuna",
+    "identifier": "https://orcid.org/0009-0005-6358-9910",
+    "email": "genarocarrasco.ozuna@gmail.com",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Proyecto TCDS / Motor Sincrónico de Luz (MSL)"
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Genaro Carrasco Ozuna",
+    "identifier": "https://orcid.org/0009-0005-6358-9910"
+  },
+  "keywords": [
+    "Teoría de la Cromodinámica Sincrónica",
+    "TCDS",
+    "Σ-metrics",
+    "Filtro de Honestidad",
+    "E-Veto",
+    "ΣFET",
+    "coherencia",
+    "t_C",
+    "Termux",
+    "Android",
+    "datos sintéticos",
+    "sistemas complejos",
+    "entropía",
+    "ΔH",
+    "Q-driven",
+    "φ-driven",
+    "Diseño Entrópico"
+  ],
+  "softwareRequirements": [
+    "Python >= 3.10",
+    "NumPy >= 2.0",
+    "Entorno POSIX (Termux en Android o Linux equivalente)"
+  ],
+  "fileFormat": [
+    "application/x-python (scripts .py)",
+    "application/json",
+    "application/json+ld"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Paquete de código y datos sintéticos (zip)",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://zenodo.org/record/XXXXX/files/TCDS_SigmaDemo_Termux_v0.1.0.zip",
+      "description": "Incluye scripts Python (test_sigma.py, sigma_demo_step1_generate_data.py, sigma_demo_step2_metrics.py), datos sintéticos generados (tc_grid_demo.npy, X_tc_demo.npy, X_tm_demo.npy) y reporte de métricas (sigma_demo_eveto_report.json)."
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "prov:startedAtTime": "2025-11-13",
+    "prov:endedAtTime": "2025-11-13",
+    "prov:used": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Termux",
+        "url": "https://termux.dev/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NumPy",
+        "url": "https://numpy.org/"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Canon de Σ-metrics y Filtro de Honestidad (E-Veto) TCDS",
+        "identifier": "https://doi.org/10.5281/zenodo.17520491"
+      }
+    ],
+    "prov:description": "Sesión de implementación y validación inicial de Σ-metrics y E-Veto en un entorno Termux sobre datos sintéticos, confirmando que el filtro entrópico no produce falsos positivos en un escenario controlado."
+  },
+  "prov:generatedAtTime": "2025-11-13",
+  "citation": "Carrasco Ozuna, G. (2025). TCDS Σ-metrics Termux Demo — E-Veto sobre datos sintéticos (v0.1.0). Módulo de prueba para la Teoría de la Cromodinámica Sincrónica (TCDS) en entorno Termux/Android."
+}
