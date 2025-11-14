@@ -1,5 +1,9 @@
 🌑 TCDS — Evento Cero (Puebla–Morelos 2017) + Σ-metrics Termux Demo
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg)](https://doi.org/10.5281/zenodo.17605698)
+![Release](https://img.shields.io/github/v/release/geozunac3536-jpg/TCDS_EventoCero_tC_PueblaMorelos2017)
+![Status](https://img.shields.io/badge/Status-Estable-%2300ffad)
+
 <p align="center">
   <a href="https://doi.org/10.5281/zenodo.17605698">
     <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg" width="260">
