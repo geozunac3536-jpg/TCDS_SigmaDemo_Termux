@@ -39,3 +39,7 @@ En este estado, el demo confirma que el filtro E-Veto no produce falsos positivo
 ### En Termux (Android)
 1. Instala Termux desde F-Droid o Google Play.
 2. Ejecuta:
+## Cómo citar
+
+Carrasco, G. (2025). *Evento Cero TCDS — Índice t_C Regional del Sismo M7.1 Puebla–Morelos (2017).* Zenodo.  
+https://doi.org/10.5281/zenodo.17605698
