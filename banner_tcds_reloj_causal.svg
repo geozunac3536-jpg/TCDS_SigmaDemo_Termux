@@ -1,0 +1,134 @@
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="gradRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#40FF9C"/>
+      <stop offset="100%" stop-color="#FF00FF"/>
+    </linearGradient>
+
+    <radialGradient id="gradCore" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="50%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 1
+                0 0 0 0 1
+                0 0 0 0.9 0"/>
+    </filter>
+
+    <filter id="ringGlow">
+      <feGaussianBlur stdDeviation="4" result="blur2"/>
+      <feColorMatrix in="blur2" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0.9 0.8
+                0 0 0 0.9 1
+                0 0 0 0.8 0"/>
+    </filter>
+
+    <linearGradient id="gradAxis" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF00FF" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="gradTick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo sutil -->
+  <rect x="0" y="0" width="900" height="260" fill="none"/>
+
+  <!-- Glow del anillo -->
+  <circle cx="190" cy="130" r="90" stroke="url(#gradRing)" stroke-width="8" fill="none" filter="url(#ringGlow)" opacity="0.9"/>
+
+  <!-- Anillo principal del reloj causal -->
+  <circle cx="190" cy="130" r="86" stroke="url(#gradRing)" stroke-width="2.5" fill="url(#gradCore)" />
+
+  <!-- Marcas de tiempo (ticks) -->
+  <!-- 12 marca principal -->
+  <line x1="190" y1="42" x2="190" y2="54" stroke="url(#gradTick)" stroke-width="2.4"/>
+  <!-- 3 -->
+  <line x1="278" y1="130" x2="266" y2="130" stroke="url(#gradTick)" stroke-width="2"/>
+  <!-- 6 -->
+  <line x1="190" y1="218" x2="190" y2="206" stroke="url(#gradTick)" stroke-width="2.4"/>
+  <!-- 9 -->
+  <line x1="102" y1="130" x2="114" y2="130" stroke="url(#gradTick)" stroke-width="2"/>
+
+  <!-- Ticks intermedios -->
+  <g stroke="url(#gradTick)" stroke-width="1.5">
+    <line x1="233" y1="52" x2="228" y2="62"/>
+    <line x1="260" y1="79" x2="251" y2="87"/>
+    <line x1="260" y1="181" x2="251" y2="173"/>
+    <line x1="233" y1="208" x2="228" y2="198"/>
+
+    <line x1="147" y1="52" x2="152" y2="62"/>
+    <line x1="120" y1="79" x2="129" y2="87"/>
+    <line x1="120" y1="181" x2="129" y2="173"/>
+    <line x1="147" y1="208" x2="152" y2="198"/>
+  </g>
+
+  <!-- Aguja de t_C -->
+  <line x1="190" y1="130" x2="244" y2="88"
+        stroke="url(#gradAxis)" stroke-width="3.1" stroke-linecap="round" />
+  <!-- Punto central -->
+  <circle cx="190" cy="130" r="5" fill="#00E5FF"/>
+
+  <!-- Anillo interno Sigma -->
+  <circle cx="190" cy="130" r="52"
+          stroke="rgba(64,255,156,0.5)" stroke-width="1.6"
+          stroke-dasharray="4 8" fill="none"/>
+
+  <!-- Banda de "ventana pre B" -->
+  <path d="M190 46
+           A84 84 0 0 1 260 116"
+        fill="none" stroke="#40FF9C" stroke-width="3"
+        stroke-linecap="round" stroke-dasharray="6 6"/>
+
+  <!-- Etiquetas dentro del reloj -->
+  <text x="190" y="124" fill="#E5E7EB" font-size="13" text-anchor="middle">t_C</text>
+  <text x="190" y="143" fill="#9CA3AF" font-size="9" text-anchor="middle">ventanas A1–A2–B–C–D</text>
+
+  <!-- Eje Q–Σ–φ a la derecha del reloj (línea horizontal con glow) -->
+  <line x1="330" y1="70" x2="830" y2="70"
+        stroke="url(#gradAxis)" stroke-width="2.2" />
+
+  <!-- Texto principal: Reloj Causal TCDS -->
+  <text x="330" y="110" fill="#E5E7EB" font-size="22" font-weight="600">
+    Reloj Causal TCDS · Σ-metrics
+  </text>
+
+  <!-- Fórmula Q·Σ = φ -->
+  <text x="330" y="142" fill="#A5B4FC" font-size="18" font-family="serif">
+    Q · Σ = φ
+  </text>
+
+  <!-- Subtítulo: índice t_C y E-Veto -->
+  <text x="330" y="168" fill="#9CA3AF" font-size="12">
+    Índice t_C regional con Filtro de Honestidad (E-Veto)
+  </text>
+
+  <!-- Bullets de resumen -->
+  <text x="330" y="190" fill="#9CA3AF" font-size="11">
+    • Ventana B (Pre-evento): LI = 0.88, R = 0.92, ΔH = −0.22 → t_C ≈ 1.03
+  </text>
+  <text x="330" y="206" fill="#9CA3AF" font-size="11">
+    • Señal coherente sólo si hay caída de entropía (ΔH &lt; 0)
+  </text>
+  <text x="330" y="222" fill="#9CA3AF" font-size="11">
+    • Diseñado para datos públicos multicanal (TEC, Kp, sismicidad, meteo…)
+  </text>
+
+  <!-- Sello lateral Σ / t_C -->
+  <circle cx="830" cy="130" r="28" stroke="url(#gradRing)" stroke-width="2.2" fill="none"/>
+  <circle cx="830" cy="130" r="22" fill="#020617" />
+  <text x="830" y="127" fill="#00E5FF" font-size="16" text-anchor="middle">Σ</text>
+  <text x="830" y="144" fill="#9CA3AF" font-size="9" text-anchor="middle">t_C</text>
+</svg>
