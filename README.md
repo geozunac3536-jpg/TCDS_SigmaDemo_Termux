@@ -1,45 +1,180 @@
-# TCDS Σ-metrics Termux Demo — E-Veto sobre datos sintéticos (v0.1.0)
-# TCDS — Evento Cero: Índice t_C Puebla–Morelos (2017)
+🌑 TCDS — Evento Cero (Puebla–Morelos 2017) + Σ-metrics Termux Demo
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg)](https://doi.org/10.5281/zenodo.17605698)
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.17605698">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg" width="260">
+  </a>
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Framework-TCDS-%2300e5ff.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Q--driven-ENGINEERING-%23bb00ff.svg?style=for-the-badge">
+</p>Bienvenido al repositorio oficial del Evento Cero TCDS, donde convergen:
 
-Este repositorio está conectado al registro Zenodo correspondiente:
-**DOI: 10.5281/zenodo.17605698**
+El Índice t_C Regional aplicado al sismo M7.1 Puebla–Morelos (19/09/2017)
 
-Este dataset/documentación contiene:
-- Evento Cero TCDS  
-- Manifiesto del experimento  
-- Motor Σ reducido  
-- Resultado t_C  
-- PDF técnico para expertos  
-- Preprint asociado
+El motor Σ-metrics y el Filtro de Honestidad (E-Veto)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6358--9910-green.svg)](https://orcid.org/0009-0005-6358-9910)
+Una implementación Termux–Android, totalmente portátil, reproducible y auditable
 
-## Descripción
-Implementación mínima y auditable del motor Σ-metrics y del Filtro de Honestidad (E-Veto) de la Teoría de la Cromodinámica Sincrónica (TCDS) sobre datos sintéticos, ejecutada en un entorno Termux (Android). El avance consiste en: 
-1. Calibrar Python+NumPy en un dispositivo móvil (Samsung S23).
-2. Generar un conjunto sintético de eventos X_tc(t_C) con una forma Σ_base común y ruido controlado.
-3. Definir un pipeline reproducible para calcular Σ-metrics (R_mean, LI, RMSE_SL, κΣ) en ventanas de t_C.
-4. Aplicar un E-Veto entrópico (ΔH) que verifica que el sistema no declare coherencia Σ válida cuando no hay reducción real de entropía.
 
-En este estado, el demo confirma que el filtro E-Veto no produce falsos positivos y que el entorno Termux funciona como laboratorio Q-driven portátil para futuros experimentos TCDS con datos sísmicos reales.
+Este repositorio está enlazado a Zenodo mediante el DOI oficial:
 
-**Identificador:** tcds:sigma-demo-termux-v0.1.0  
-**Versión:** 0.1.0  
-**Fecha:** 2025-11-13  
-**Parte de:** [Teoría de la Cromodinámica Sincrónica (TCDS)](https://doi.org/10.5281/zenodo.17520491)  
-**Creador:** Genaro Carrasco Ozuna ([ORCID](https://orcid.org/0009-0005-6358-9910))  
-**Keywords:** Teoría de la Cromodinámica Sincrónica, TCDS, Σ-metrics, Filtro de Honestidad, E-Veto, ΣFET, coherencia, t_C, Termux, Android, datos sintéticos, sistemas complejos, entropía, ΔH, Q-driven, φ-driven, Diseño Entrópico.
+> 🔗 DOI: https://doi.org/10.5281/zenodo.17605698
 
-## Instalación
-### En Termux (Android)
-1. Instala Termux desde F-Droid o Google Play.
-2. Ejecuta:
-## Cómo citar
 
-Carrasco, G. (2025). *Evento Cero TCDS — Índice t_C Regional del Sismo M7.1 Puebla–Morelos (2017).* Zenodo.  
+
+Es un nodo FARO dentro del ecosistema TCDS.
+
+
+---
+
+🌒 Contenido del repositorio
+
+📌 1. Evento Cero TCDS — Puebla–Morelos 2017
+
+Incluye:
+
+manifest_tC_PueblaMorelos2017.json — Manifiesto del evento
+
+compute_tC_index.py — Motor Σ reducido
+
+tC_index_PueblaMorelos2017.json — Resultado oficial
+
+PDF técnico para expertos
+
+Preprint científico asociado al DOI
+
+
+Este evento representa la primera ejecución operacional del índice t_C.
+
+
+---
+
+📌 2. Σ-metrics Termux Demo — E-Veto sobre datos sintéticos
+
+Versión v0.1.0, validación inicial del pipeline:
+
+Cálculo de Σ-metrics (LI, R, RMSE_SL, κΣ)
+
+Aplicación del E-Veto (ΔH < –0.2)
+
+Demostración de un laboratorio Q-driven portátil en un Samsung S23
+
+
+Base fundamental para el sistema sísmico TCDS.
+
+
+---
+
+🛡️ Badges técnicos
+
+   
+
+
+---
+
+🌘 Descripción técnica
+
+Este repositorio implementa el núcleo del marco Q–Σ–φ:
+
+Cálculo del Índice t_C
+
+Ventanas palíndromas A1–A2–B–C–D
+
+Motor Σ determinista y portable
+
+Análisis E-Veto evitando apofenia
+
+Auditoría completa mediante JSON
+
+
+✔ Resultado clave
+
+Ventana	LI	R	ΔH	t_C
+
+B (Pre)	0.88	0.92	–0.22	1.03
+
+
+Interpretación:
+
+Coherencia elevada antes del evento
+
+Caída de entropía (ΔH < 0)
+
+Incremento claro de t_C
+
+Patrón consistente con tensión causal TCDS
+
+
+
+---
+
+📱 Instalación en Termux (Android)
+
+pkg update && pkg upgrade
+pkg install python
+pip install numpy pandas
+
+Clonar:
+
+git clone https://github.com/geozunac3536-jpg/TCDS_EventoCero_tC_PueblaMorelos2017.git
+cd TCDS_EventoCero_tC_PueblaMorelos2017
+
+Ejecutar el índice t_C:
+
+python scripts/compute_tC_index.py \
+  --manifest manifest_tC_PueblaMorelos2017.json \
+  --out results/tC_index_PueblaMorelos2017.json
+
+
+---
+
+🌕 Cómo citar
+
+Carrasco, G. (2025). Evento Cero TCDS — Índice t_C Regional del Sismo  
+M7.1 Puebla–Morelos (2017). Zenodo.  
 https://doi.org/10.5281/zenodo.17605698
+
+
+---
+
+🌑 Licencias
+
+Código: MIT
+
+Documentación: CC BY 4.0
+
+Marco TCDS: DOI oficial → https://doi.org/10.5281/zenodo.17520491
+
+
+
+---
+
+🛰️ Ecosistema TCDS
+
+Este repositorio forma parte directa de:
+
+Σ-metrics
+
+ΣFET / SYNCTRON
+
+Reloj Causal (t_C Engine)
+
+CSL-H
+
+Sistema Predictivo Sísmico TCDS
+
+
+
+---
+
+🎯 Estado actual
+
+✔ Evento Cero completo
+✔ t_C validado
+✔ Motor Σ funcional en Termux
+✔ DOI enlazado
+✔ Documentación experta incluida
+⬜ Integración multicanal real (TEC, Kp, Dst, sismogramas)
+
+
+---
