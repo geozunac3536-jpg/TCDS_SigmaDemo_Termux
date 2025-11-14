@@ -1,0 +1,45 @@
+{
+  "event": {
+    "id": "M7.1_PueblaMorelos_2017",
+    "date_time_utc": "2017-09-19T18:14:00Z",
+    "description": "Evento Cero TCDS — Sismo M7.1 Puebla–Morelos 2017"
+  },
+  "windows": {
+    "A1": {
+      "LI": 0.71,
+      "R": 0.67,
+      "DeltaH": 0.14,
+      "offset_hours": "-72 a -48"
+    },
+    "A2": {
+      "LI": 0.73,
+      "R": 0.69,
+      "DeltaH": 0.16,
+      "offset_hours": "-48 a -24"
+    },
+    "B": {
+      "LI": 0.88,
+      "R": 0.92,
+      "DeltaH": -0.22,
+      "offset_hours": "-24 a 0"
+    },
+    "C": {
+      "LI": 0.65,
+      "R": 0.54,
+      "DeltaH": 0.45,
+      "offset_hours": "0 a +24"
+    },
+    "D": {
+      "LI": 0.7,
+      "R": 0.66,
+      "DeltaH": 0.18,
+      "offset_hours": "+24 a +48"
+    }
+  },
+  "E_Veto": {
+    "LI_min": 0.8,
+    "R_min": 0.85,
+    "DeltaH_max": 0.0
+  },
+  "tC_formula": "t_C = LI * R - DeltaH"
+}
