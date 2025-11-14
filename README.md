@@ -1,4 +1,18 @@
 # TCDS Σ-metrics Termux Demo — E-Veto sobre datos sintéticos (v0.1.0)
+# TCDS — Evento Cero: Índice t_C Puebla–Morelos (2017)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg)](https://doi.org/10.5281/zenodo.17605698)
+
+Este repositorio está conectado al registro Zenodo correspondiente:
+**DOI: 10.5281/zenodo.17605698**
+
+Este dataset/documentación contiene:
+- Evento Cero TCDS  
+- Manifiesto del experimento  
+- Motor Σ reducido  
+- Resultado t_C  
+- PDF técnico para expertos  
+- Preprint asociado
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
