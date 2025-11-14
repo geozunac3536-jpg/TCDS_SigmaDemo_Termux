@@ -1,0 +1,350 @@
+:root {
+  --bg: #050510;
+  --bg-alt: #0b0f1a;
+  --bg-card: #111827;
+  --bg-card-soft: #111827cc;
+  --accent: #00e5ff;
+  --accent-2: #bb00ff;
+  --accent-soft: rgba(0, 229, 255, 0.18);
+  --text-main: #e5e7eb;
+  --text-soft: #9ca3af;
+  --border-subtle: #1f2933;
+  --danger: #f97373;
+  --success: #22c55e;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --transition-fast: 0.18s ease-out;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #111827 0, #050510 55%, #020309 100%);
+  color: var(--text-main);
+  font-family: var(--font-main);
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.hero {
+  padding: 32px 16px 16px;
+}
+
+.hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+
+.hero-text h1 span {
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  margin: 0 0 16px;
+  color: var(--text-soft);
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hero-badges img {
+  height: 26px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.kofi-wrapper {
+  margin-top: 8px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #020617;
+  box-shadow: 0 14px 28px rgba(0, 229, 255, 0.35);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 229, 255, 0.5);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+
+.btn.ghost:hover {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: var(--accent);
+}
+
+.btn.kofi {
+  background: #ff5f5f;
+  color: #111827;
+  box-shadow: 0 12px 24px rgba(255, 95, 95, 0.4);
+}
+
+.btn.kofi:hover {
+  box-shadow: 0 16px 32px rgba(255, 95, 95, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn.small {
+  padding: 7px 13px;
+  font-size: 0.85rem;
+}
+
+/* HERO PANEL */
+
+.hero-panel {
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+}
+
+.card.gradient {
+  background: radial-gradient(circle at top left, rgba(0, 229, 255, 0.16), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(187, 0, 255, 0.1), transparent 55%),
+              var(--bg-card-soft);
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+}
+
+.status-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+
+.status-list li {
+  padding: 4px 0;
+  color: var(--text-soft);
+}
+
+/* MAIN LAYOUT */
+
+.layout {
+  max-width: 1120px;
+  margin: 0 auto 40px;
+  padding: 0 16px 24px;
+}
+
+.section {
+  margin-top: 22px;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.section p {
+  color: var(--text-soft);
+}
+
+/* GRID */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+/* LISTS */
+
+.bullets {
+  color: var(--text-soft);
+  padding-left: 18px;
+}
+
+.card-list {
+  color: var(--text-soft);
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+.card-list li {
+  margin-bottom: 4px;
+}
+
+/* TABLE */
+
+.table-card {
+  overflow-x: auto;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table-card th,
+.table-card td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.table-card th {
+  text-align: left;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.table-card tbody tr:hover {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.table-card .highlight {
+  background: rgba(0, 229, 255, 0.06);
+}
+
+/* CODE + PRE */
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.83rem;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 2px 5px;
+  border-radius: 6px;
+}
+
+pre {
+  background: rgba(15, 23, 42, 0.95);
+  padding: 10px 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.citation {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+/* STEPS */
+
+.steps {
+  padding-left: 18px;
+  color: var(--text-soft);
+}
+
+.steps li {
+  margin-bottom: 8px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 1px solid #111827;
+  padding: 14px 16px 18px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  background: radial-gradient(circle at top, #020617 0, #020309 40%, #000 100%);
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-panel {
+    order: -1;
+  }
+
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 18px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
