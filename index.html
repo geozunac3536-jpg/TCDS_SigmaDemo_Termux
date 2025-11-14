@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TCDS Σ-metrics Termux Demo — Evento Cero t_C Puebla–Morelos 2017</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="TCDS Σ-metrics Termux Demo + Evento Cero t_C Puebla–Morelos 2017. Implementación mínima del motor Σ-metrics y Filtro de Honestidad (E-Veto) TCDS sobre datos sintéticos y un caso sísmico real M7.1 Puebla–Morelos."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>TCDS Σ-metrics Termux Demo<br><span>+ Evento Cero t<sub>C</sub> Puebla–Morelos 2017</span></h1>
+        <p class="hero-subtitle">
+          Implementación mínima del motor <strong>Σ-metrics</strong> y el
+          <strong>Filtro de Honestidad (E-Veto)</strong> de la TCDS, ejecutado en
+          <strong>Termux/Android</strong> y aplicado al sismo
+          <strong>M7.1 Puebla–Morelos (19/09/2017)</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary"
+             href="https://doi.org/10.5281/zenodo.17605698"
+             target="_blank" rel="noopener">
+            📡 DOI Evento Cero — Zenodo
+          </a>
+          <a class="btn ghost"
+             href="https://github.com/geozunac3536-jpg/TCDS_EventoCero_tC_PueblaMorelos2017"
+             target="_blank" rel="noopener">
+            🧬 Ver repositorio en GitHub
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <a href="https://doi.org/10.5281/zenodo.17605698" target="_blank" rel="noopener">
+            <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17605698.svg" alt="DOI Zenodo">
+          </a>
+          <a href="https://orcid.org/0009-0005-6358-9910" target="_blank" rel="noopener">
+            <img src="https://img.shields.io/badge/ORCID-0009--0005--6358--9910-green.svg" alt="ORCID Genaro Carrasco Ozuna">
+          </a>
+          <img src="https://img.shields.io/badge/Python-3.12-blue.svg" alt="Python 3.12">
+        </div>
+
+        <div class="kofi-wrapper">
+          <a class="btn kofi"
+             href="https://ko-fi.com"
+             target="_blank" rel="noopener">
+            ☕ Apoyar el proyecto en Ko-fi
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="card gradient">
+          <h2>Estado del experimento</h2>
+          <ul class="status-list">
+            <li>✔ Evento Cero definido (M7.1 Puebla–Morelos 2017)</li>
+            <li>✔ Índice t<sub>C</sub> regional calculado</li>
+            <li>✔ Motor Σ reducido funcionando en Termux</li>
+            <li>✔ Filtro E-Veto activado (ΔH &lt; 0)</li>
+            <li>✔ DOI enlazado y citable</li>
+            <li>⬜ Integración multicanal real (TEC, Kp, Dst, sismogramas)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- BLOQUE 1: Landing científica -->
+    <section class="section">
+      <h2>¿Qué es este proyecto?</h2>
+      <p>
+        Este sitio resume el <strong>Evento Cero TCDS</strong> y la
+        <strong>Σ-metrics Termux Demo</strong>. Juntos forman un
+        <em>laboratorio Q-driven portátil</em> que permite:
+      </p>
+      <ul class="bullets">
+        <li>Calcular métricas de coherencia (<strong>Σ-metrics</strong>) sobre señales físicas.</li>
+        <li>Aplicar el <strong>Filtro de Honestidad (E-Veto)</strong> para evitar apofenia.</li>
+        <li>Construir un <strong>índice t<sub>C</sub> regional</strong> en torno a un sismo real.</li>
+        <li>Ejecutar todo el flujo en un dispositivo Android usando <strong>Termux</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- BLOQUE 2: Dashboard de módulos -->
+    <section class="section grid-2">
+      <article class="card">
+        <h3>🧭 Evento Cero TCDS — Puebla–Morelos 2017</h3>
+        <p>
+          Caso de estudio basado en el sismo <strong>M7.1 Puebla–Morelos (19/09/2017)</strong>,
+          donde se define una ventana palíndroma A1–A2–B–C–D alrededor del tiempo origen
+          <code>t₀</code> y se construye un <strong>índice t<sub>C</sub> regional</strong>.
+        </p>
+        <ul class="card-list">
+          <li><code>manifest_tC_PueblaMorelos2017.json</code> — Manifiesto del evento.</li>
+          <li><code>compute_tC_index.py</code> — Motor Σ reducido (JSON-in, JSON-out).</li>
+          <li><code>tC_index_PueblaMorelos2017.json</code> — Resultado del índice t<sub>C</sub>.</li>
+          <li>PDF experto y preprint disponibles en el registro Zenodo.</li>
+        </ul>
+        <a class="btn small"
+           href="https://doi.org/10.5281/zenodo.17605698"
+           target="_blank" rel="noopener">
+          🔎 Ver paquete completo en Zenodo
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>📱 Σ-metrics Termux Demo — E-Veto</h3>
+        <p>
+          Implementación mínima del motor <strong>Σ-metrics</strong> y del
+          <strong>E-Veto entrópico</strong> sobre datos sintéticos controlados,
+          ejecutado en un <strong>Samsung S23</strong> vía Termux.
+        </p>
+        <ul class="card-list">
+          <li>Validación de ausencia de falsos positivos bajo ruido controlado.</li>
+          <li>Cálculo de <code>LI</code>, <code>R</code>, <code>RMSE_SL</code>, <code>κΣ</code>.</li>
+          <li>Aplicación de la condición ΔH &lt; −0.2 para aceptar coherencia Σ.</li>
+          <li>Entorno preparado para conectar datos sísmicos reales y multicanal.</li>
+        </ul>
+        <a class="btn small"
+           href="https://github.com/geozunac3536-jpg/TCDS_SigmaDemo_Termux"
+           target="_blank" rel="noopener">
+          🧪 Ver código Σ-metrics Termux Demo
+        </a>
+      </article>
+    </section>
+
+    <!-- BLOQUE 3: Resultados clave -->
+    <section class="section">
+      <h2>Resultados clave del índice t<sub>C</sub> (Evento Cero)</h2>
+      <p>
+        El índice t<sub>C</sub> se calcula, a modo de ejemplo, como:
+        <code>tC = LI × R − ΔH</code>, aplicando además el filtro E-Veto:
+        <code>LI ≥ 0.80</code>, <code>R ≥ 0.85</code>, <code>ΔH &lt; 0</code>.
+      </p>
+
+      <div class="card table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Ventana</th>
+              <th>Offset (h)</th>
+              <th>LI</th>
+              <th>R</th>
+              <th>ΔH</th>
+              <th>t<sub>C</sub></th>
+              <th>E-Veto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A1 (Fondo remoto)</td>
+              <td>−72 a −48</td>
+              <td>0.71</td>
+              <td>0.67</td>
+              <td>+0.14</td>
+              <td>0.34</td>
+              <td>✖</td>
+            </tr>
+            <tr>
+              <td>A2 (Fondo cercano)</td>
+              <td>−48 a −24</td>
+              <td>0.73</td>
+              <td>0.69</td>
+              <td>+0.16</td>
+              <td>0.34</td>
+              <td>✖</td>
+            </tr>
+            <tr class="highlight">
+              <td>B (Pre-evento)</td>
+              <td>−24 a 0</td>
+              <td>0.88</td>
+              <td>0.92</td>
+              <td>−0.22</td>
+              <td>1.03</td>
+              <td>✔</td>
+            </tr>
+            <tr>
+              <td>C (Post inmediato)</td>
+              <td>0 a +24</td>
+              <td>0.65</td>
+              <td>0.54</td>
+              <td>+0.45</td>
+              <td>0.10</td>
+              <td>✖</td>
+            </tr>
+            <tr>
+              <td>D (Recuperación)</td>
+              <td>+24 a +48</td>
+              <td>0.70</td>
+              <td>0.66</td>
+              <td>+0.18</td>
+              <td>0.28</td>
+              <td>✖</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">
+        La ventana <strong>B (Pre-evento)</strong> muestra coherencia elevada (LI, R altos),
+        caída de entropía (ΔH &lt; 0) y un t<sub>C</sub> significativamente mayor que el fondo,
+        consistente con una fase de <strong>tensión causal</strong> en el marco TCDS.
+      </p>
+    </section>
+
+    <!-- BLOQUE 4: Cómo reproducir el experimento -->
+    <section class="section grid-2">
+      <article class="card">
+        <h3>▶ Reproducir en Termux (Android)</h3>
+        <ol class="steps">
+          <li>Instalar <strong>Termux</strong> desde F-Droid o tienda confiable.</li>
+          <li>Actualizar e instalar Python:
+            <pre><code>pkg update && pkg upgrade
+pkg install python
+pip install numpy pandas</code></pre>
+          </li>
+          <li>Clonar el repositorio:
+            <pre><code>git clone https://github.com/geozunac3536-jpg/TCDS_EventoCero_tC_PueblaMorelos2017.git
+cd TCDS_EventoCero_tC_PueblaMorelos2017</code></pre>
+          </li>
+          <li>Ejecutar el motor Σ:
+            <pre><code>python scripts/compute_tC_index.py \
+  --manifest manifest_tC_PueblaMorelos2017.json \
+  --out results/tC_index_PueblaMorelos2017.json</code></pre>
+          </li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>📚 Citación y ecosistema TCDS</h3>
+        <p>Si utilizas este trabajo, por favor cita:</p>
+        <pre class="citation"><code>Carrasco, G. (2025).
+Evento Cero TCDS — Índice t_C Regional del Sismo
+M7.1 Puebla–Morelos (2017). Zenodo.
+https://doi.org/10.5281/zenodo.17605698
+</code></pre>
+        <p>
+          Este experimento forma parte del ecosistema TCDS:
+        </p>
+        <ul class="bullets">
+          <li>Σ-metrics y coherencímetros.</li>
+          <li>Transistor ΣFET / SYNCTRON.</li>
+          <li>Reloj Causal (t<sub>C</sub> Engine).</li>
+          <li>CSL-H (coherencia humana).</li>
+          <li>Sistema Predictivo Sísmico TCDS.</li>
+        </ul>
+        <p>
+          Más sobre la teoría completa:
+          <a href="https://doi.org/10.5281/zenodo.17520491"
+             target="_blank" rel="noopener">
+            DOI 10.5281/zenodo.17520491
+          </a>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Proyecto TCDS — Genaro Carrasco Ozuna · ORCID
+      <a href="https://orcid.org/0009-0005-6358-9910" target="_blank" rel="noopener">
+        0009-0005-6358-9910
+      </a>
+    </p>
+    <p>
+      Licencias: Código MIT · Documentación CC BY 4.0 ·
+      Núcleo TCDS bajo el DOI
+      <a href="https://doi.org/10.5281/zenodo.17520491" target="_blank" rel="noopener">
+        10.5281/zenodo.17520491
+      </a>
+    </p>
+    <p>
+      ☕ ¿Te fue útil? Apoya el proyecto en
+      <a href="https://ko-fi.com" target="_blank" rel="noopener">Ko-fi</a>.
+    </p>
+  </footer>
+</body>
+</html>
